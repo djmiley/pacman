@@ -1,16 +1,32 @@
 <page>
-    <label>{state.pageNumber}</label>
+    <label>{pageState.number}</label>
+    <label>{pageState.text}</label>
+
+    <div id='menu' class='btn-group col-sm-6' role='group'>
+        <button class='btn btn-default' each={pageState.navigatorOptions} type='button' onclick={setPageNumber}>
+            {text}
+        </button>
+    </div>
 
     <script>
 
         let store = this.opts.store;
 
-        this.state = store.getState();
+        let pageNumber = store.getState().pageNumber;
+
+        this.pageState = store.getState().pages.find(page => page.number === pageNumber);
 
         store.subscribe(() => {
-            this.state = store.getState();
+            pageNumber = store.getState().pageNumber;
+
+            this.pageState = store.getState().pages.find(page => page.number === pageNumber);
+
             this.update();
         });
+
+        this.setPageNumber = (e) => {
+            this.opts.setpagenumber(e.item.destinationNumber);
+        };
 
     </script>
 

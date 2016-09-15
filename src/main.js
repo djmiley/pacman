@@ -18,7 +18,7 @@ const store = createStoreDevTools(reducer);
 store.dispatch({
     type: actions.SET_STATE,
     state: {
-        pageNumber: 1,
+        pageNumber: 0,
         pages: pages
     }
 });
