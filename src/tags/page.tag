@@ -1,9 +1,5 @@
-import * as actionCreators from '../actions/pacman';
-
-import './page.tag';
-
-<app-container>
-    <page store={this.opts.store}></page>
+<page>
+    <label>{state.pageNumber}</label>
 
     <script>
 
@@ -18,4 +14,4 @@ import './page.tag';
 
     </script>
 
-</app-container>
+</page>
