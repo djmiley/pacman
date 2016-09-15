@@ -1,6 +1,7 @@
 <page>
     <label>{pageState.number}</label>
     <label>{pageState.text}</label>
+    <img if={pageState.imageName} src='./images/{pageState.imageName}.jpg' />
 
     <div id='menu' class='btn-group col-sm-6' role='group'>
         <button class='btn btn-default' each={pageState.navigatorOptions} type='button' onclick={setPageNumber}>
