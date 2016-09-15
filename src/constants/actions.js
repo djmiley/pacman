@@ -1,0 +1,1 @@
+export const SET_STATE = 'pacman/SET_STATE';
