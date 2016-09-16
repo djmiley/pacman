@@ -1,12 +1,18 @@
 <page>
-    <label>{pageState.number}</label>
-    <label>{pageState.text}</label>
-    <img if={pageState.imageName} src='./images/{pageState.imageName}.jpg' />
-
-    <div id='menu' class='btn-group col-sm-6' role='group'>
-        <button class='btn btn-default' each={pageState.navigatorOptions} type='button' onclick={setPageNumber}>
-            {text}
-        </button>
+    <div class='container'>
+        <div class='jumbotron'>
+            <h1>{pageState.number}</h1>
+            <h2 if={pageState.title} class='text-center'>{pageState.title}</h2>
+            <div if={pageState.imageName}>
+                <img src='./images/{pageState.imageName}.jpg' class='img-responsive' />
+            </div>
+            <h4 if={pageState.text} class='text-center'><i>{pageState.text}</i></h4>
+            <div class='btn-group' role='group'>
+                <button class='btn btn-primary btn-lg' each={pageState.navigatorOptions} type='button' onclick={setPageNumber}>
+                    {text}
+                </button>
+            </div>
+        </div>
     </div>
 
     <script>

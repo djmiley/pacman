@@ -3,6 +3,10 @@ import Page from '../objects/Page';
 
 const navigatorOptions = [new NavigatorOption(0, 'Play Again?')];
 
-const page = new Page(2, 'You win', navigatorOptions, '2');
+const page = new Page(2,
+    null,
+    '2',
+    'You win',
+    navigatorOptions);
 
 export default page;
