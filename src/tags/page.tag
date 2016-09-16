@@ -4,7 +4,7 @@
             <h1>{pageState.number}</h1>
             <h2 if={pageState.title} class='text-center'>{pageState.title}</h2>
             <div if={pageState.imageName}>
-                <img src='./images/{pageState.imageName}.jpg' class='img-responsive' />
+                <img src='./images/{pageState.imageName}' class='img-responsive' />
             </div>
             <h4 if={pageState.text} class='text-center'><i>{pageState.text}</i></h4>
             <div class='btn-group' role='group'>
