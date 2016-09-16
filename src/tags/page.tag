@@ -6,7 +6,15 @@
             <div if={pageState.imageName}>
                 <img src='./images/{pageState.imageName}' class='img-responsive' />
             </div>
-            <h4 if={pageState.text} class='text-center'><i>{pageState.text}</i></h4>
+            <div if={pageState.text}>
+                <div each={paragraph in pageState.text}>
+                    <p>
+                        <h4 class='text-center'>
+                            <i>{paragraph}</i>
+                        </h4>
+                    </p>
+                </div>
+            </div>
             <div class='btn-group' role='group'>
                 <button class='btn btn-primary btn-lg' each={pageState.navigatorOptions} type='button' onclick={setPageNumber}>
                     {text}

@@ -6,7 +6,7 @@ const navigatorOptions = [new NavigatorOption(0, 'Play Again?')];
 const page = new Page(3,
     null,
     null, 
-    'You lose',
+    ['You lose'],
     navigatorOptions);
 
 export default page;

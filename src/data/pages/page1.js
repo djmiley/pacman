@@ -7,7 +7,7 @@ const navigatorOptions = [new NavigatorOption(2, 'Win'),
 const page = new Page(1,
     null,
     null,
-    'Win or lose?',
+    ['Win or lose?'],
     navigatorOptions);
 
 export default page;
