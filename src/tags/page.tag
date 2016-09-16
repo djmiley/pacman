@@ -1,7 +1,7 @@
 <page>
     <div class='container'>
         <div class='jumbotron'>
-            <h1>{pageState.number}</h1>
+            <h1 if={pageState.number}>{pageState.number}</h1>
             <h2 if={pageState.title} class='text-center'>{pageState.title}</h2>
             <div if={pageState.imageName}>
                 <img src='./images/{pageState.imageName}' class='img-responsive' />
