@@ -6,7 +6,7 @@ const text = ['Pushing yourself up from the floor, you check the room for a towe
 
 const navigatorOptions = [new NavigatorOption(0, 'Enter the East door'),
     new NavigatorOption(19, 'Enter the West door'),
-    new NavigatorOption(0, 'Wipe your hand on your shorts')];
+    new NavigatorOption(271, 'Wipe your hand on your shorts')];
 
 const page = new Page(213,
     null,
